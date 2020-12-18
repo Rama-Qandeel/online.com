@@ -39,7 +39,7 @@ const DelivaryProfile = (props) => {
   const pastOrdersInfo = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/delvarymanOrders/${user.user_id}`)
+      .get(`/delvarymanOrders/${user.user_id}`)
       .then(async (response) => {
         setPastOrders(response.data);
       })
@@ -50,7 +50,7 @@ const DelivaryProfile = (props) => {
 
   const unassignedOrdersInfo = async () => {
     axios
-      .get(`http://localhost:5000/unassignedOrders`)
+      .get(`/unassignedOrders`)
       .then(async (response) => {
         setunassignedOrders(response.data);
       })
@@ -63,7 +63,7 @@ const DelivaryProfile = (props) => {
     const user = jwt_decode(localStorage.getItem("token"));
     const body = { orders_id: infoArgumnt, delivary_user_id: user.user_id };
     axios
-      .put(`http://localhost:5000/assigneeOrder`, body)
+      .put(`/assigneeOrder`, body)
       .then(async (response) => {
         unassignedOrdersInfo();
         pastOrdersInfo(DelevaryId);

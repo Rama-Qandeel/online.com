@@ -19,7 +19,7 @@ const AddStore = ({ close, ...props }) => {
 
   const getstoreCategory = () => {
     axios
-      .get("http://localhost:5000/getstorecategory")
+      .get("/getstorecategory")
       .then((response) => {
         setGetStoreCategory(response.data);
       })
@@ -95,7 +95,7 @@ const AddStore = ({ close, ...props }) => {
         store_category: storeCategory,
       };
       axios
-        .post("http://localhost:5000/store", data)
+        .post("/store", data)
         .then((response) => {
           if (response.data) {
             props.history.push("/home");

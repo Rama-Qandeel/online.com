@@ -45,7 +45,7 @@ const Login = (props) => {
         password: password,
       };
       axios
-        .post("http://localhost:5000/login", data)
+        .post("/login", data)
         .then((response) => {
           if (response.data === "Invalid login check your email") {
             return setErrorEmail("Invalid email");

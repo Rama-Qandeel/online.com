@@ -14,7 +14,7 @@ const Home = () => {
 
   const getAllStores = () => {
     axios
-      .get("http://localhost:5000/allstore")
+      .get("/allstore")
       .then((response) => {
         setStores(response.data);
       })
@@ -27,7 +27,7 @@ const Home = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     let data = { user_id: user.user_id };
     axios
-      .get(`http://localhost:5000/getorder/${user.user_id}`)
+      .get(`/getorder/${user.user_id}`)
       .then((response) => {
         setOrderList(response.data);
         localStorage.setItem("order", JSON.stringify(response.data));
@@ -41,7 +41,7 @@ const Home = () => {
   const getSpecificStores = (e) => {
     let data = { store_category: e.target.name };
     axios
-      .post("http://localhost:5000/specificstore", data)
+      .post("/specificstore", data)
       .then((response) => {
         setStores(response.data);
       })

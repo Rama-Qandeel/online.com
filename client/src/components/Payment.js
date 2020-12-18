@@ -48,7 +48,7 @@ const Payment = ({ close, ...props }) => {
       };
     }
     axios
-      .post("http://localhost:5000/payment", data)
+      .post("/payment", data)
       .then((response) => {
         if (response.data) {
           alert(" a payment created successfully");

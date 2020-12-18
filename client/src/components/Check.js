@@ -25,7 +25,7 @@ const Check = (props) => {
   const CheckOut = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/checkout/${user.user_id}`)
+      .get(`/checkout/${user.user_id}`)
       .then((response) => {
         setCheckOut(response.data);
         getOrderstocheck();
@@ -38,7 +38,7 @@ const Check = (props) => {
   const getOrderstocheck = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/getOrderstocheck/${user.user_id}`)
+      .get(`/getOrderstocheck/${user.user_id}`)
       .then((response) => {
         setOrders(response.data);
       })

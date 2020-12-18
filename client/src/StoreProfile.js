@@ -27,7 +27,7 @@ const StoreProfile = (props) => {
 
   const getStorebyid = async (infoArgumnt) => {
     axios
-      .get(`http://localhost:5000/mystore/${infoArgumnt}`)
+      .get(`/mystore/${infoArgumnt}`)
       .then(async (response) => {
         setStore(response.data[0]);
       })
@@ -38,7 +38,7 @@ const StoreProfile = (props) => {
 
   const storesOrdersbyid = async (infoArgumnt) => {
     axios
-      .get(`http://localhost:5000/storesOrders/${infoArgumnt}`)
+      .get(`/storesOrders/${infoArgumnt}`)
       .then(async (response) => {
         setStoreOrder(response.data);
       })
@@ -49,7 +49,7 @@ const StoreProfile = (props) => {
 
   const storesProductbyid = async (infoArgumnt) => {
     axios
-      .get(`http://localhost:5000/storeproducts/${infoArgumnt}`)
+      .get(`/storeproducts/${infoArgumnt}`)
       .then(async (response) => {
         setStoreProducts(response.data);
       })
@@ -60,7 +60,7 @@ const StoreProfile = (props) => {
 
   const deleteProduct = async (infoArgumnt) => {
     axios
-      .delete(`http://localhost:5000/product/${infoArgumnt}`)
+      .delete(`/product/${infoArgumnt}`)
       .then(async (response) => {
         storesProductbyid(storeId);
       })
@@ -80,7 +80,7 @@ const StoreProfile = (props) => {
       picture: Picture,
     };
     axios
-      .put(`http://localhost:5000/product`, arrData)
+      .put(`/product`, arrData)
       .then(async (response) => {
         storesProductbyid(storeId);
       })

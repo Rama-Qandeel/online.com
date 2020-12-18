@@ -32,7 +32,7 @@ const CSTprofile = (props) => {
   const getUser = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/users/${user.user_id}`)
+      .get(`/users/${user.user_id}`)
       .then(async (response) => {
         if (response.data.length === 0) {
           alert("wrong user id");
@@ -53,7 +53,7 @@ const CSTprofile = (props) => {
   const getOrdersInfo = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/usersOrders/${user.user_id}`)
+      .get(`/usersOrders/${user.user_id}`)
       .then(async (response) => {
         setOrders(response.data);
       })
@@ -65,7 +65,7 @@ const CSTprofile = (props) => {
   const getStores = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/store/${user.user_id}`)
+      .get(`/store/${user.user_id}`)
       .then(async (response) => {
         setStores(response.data);
       })
@@ -76,7 +76,7 @@ const CSTprofile = (props) => {
 
   const deleteStore = async (infoArgumnt) => {
     axios
-      .delete(`http://localhost:5000/store/${infoArgumnt}`)
+      .delete(`/store/${infoArgumnt}`)
       .then(async (response) => {
         getStores();
       })
@@ -88,7 +88,7 @@ const CSTprofile = (props) => {
   const getunassignedOrdersInfo = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/unassignedOrders/${user.user_id}`)
+      .get(`/unassignedOrders/${user.user_id}`)
       .then(async (response) => {
         setUnassigned(response.data);
       })
@@ -99,7 +99,7 @@ const CSTprofile = (props) => {
 
   const cancelOrder = async (infoArgumnt) => {
     axios
-      .delete(`http://localhost:5000/assigneeOrder/${infoArgumnt}`)
+      .delete(`/assigneeOrder/${infoArgumnt}`)
       .then(async (response) => {
         getunassignedOrdersInfo(userId);
         getOrdersInfo();
@@ -113,7 +113,7 @@ const CSTprofile = (props) => {
     const data = { image_profile: userPic };
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .put(`http://localhost:5000/updatePic/${user.user_id}`, data)
+      .put(`/updatePic/${user.user_id}`, data)
       .then(async (response) => {
         getunassignedOrdersInfo(userId);
         getOrdersInfo();

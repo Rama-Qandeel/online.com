@@ -23,7 +23,7 @@ const Header = (props) => {
   const getUser = async () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/users/${user.user_id}`)
+      .get(`/users/${user.user_id}`)
       .then(async (response) => {
         if (response.data.length !== 0) {
           setheaderPic(response.data[0].image_profile);

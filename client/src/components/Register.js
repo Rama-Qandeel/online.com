@@ -126,7 +126,7 @@ const Register = (props) => {
         role_id: roleId,
       };
       axios
-        .post("http://localhost:5000/register", data)
+        .post("/register", data)
         .then((response) => {
           if (response.data) {
             props.history.push("/login");

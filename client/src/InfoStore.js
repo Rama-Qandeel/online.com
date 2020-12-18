@@ -9,7 +9,7 @@ const InfoStore = (props) => {
   const getproducts = () => {
     let data = { store_id: props.location.state.store_id };
     axios
-      .get(`http://localhost:5000/getproduct/${props.location.state.store_id}`)
+      .get(`/getproduct/${props.location.state.store_id}`)
       .then((response) => {
         setProducts(response.data);
       })
@@ -24,7 +24,7 @@ const InfoStore = (props) => {
     if (searchProduct) {
       axios
         .get(
-          `http://localhost:5000/getsearch?search=${e.target.value}&id=${props.location.state.store_id}`
+          `/getsearch?search=${e.target.value}&id=${props.location.state.store_id}`
         )
         .then((response) => {
           setProducts(response.data);

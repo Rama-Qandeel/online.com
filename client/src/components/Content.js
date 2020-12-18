@@ -51,7 +51,7 @@ const Content = ({ close, ...props }) => {
       };
     }
     axios
-      .post("http://localhost:5000/order", data)
+      .post("/order", data)
       .then((response) => {
         createCheckOut();
         getOrders();
@@ -65,7 +65,7 @@ const Content = ({ close, ...props }) => {
   const createCheckOut = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/createcheckout/${user.user_id}`)
+      .get(`/createcheckout/${user.user_id}`)
       .then((response) => {})
       .catch((error) => {
         throw error;
@@ -75,7 +75,7 @@ const Content = ({ close, ...props }) => {
   const getOrders = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/getorder/${user.user_id}`)
+      .get(`/getorder/${user.user_id}`)
       .then((response) => {
         setOrderList(response.data);
         localStorage.setItem("order", JSON.stringify(response.data));
@@ -98,7 +98,7 @@ const Content = ({ close, ...props }) => {
   const getquant = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/getquant/${product_id}/${user.user_id}`)
+      .get(`/getquant/${product_id}/${user.user_id}`)
       .then((response) => {
         if (response.data.length) {
           setupdatequantity(response.data[0].quantity);
@@ -130,7 +130,7 @@ const Content = ({ close, ...props }) => {
       user_id: user.user_id,
     };
     axios
-      .put(`http://localhost:5000/order`, data)
+      .put(`/order`, data)
       .then((response) => {
         alert("done");
       })

@@ -18,7 +18,7 @@ const Cart = (props) => {
     const user = jwt_decode(localStorage.getItem("token"));
     let data = { user_id: user.user_id };
     axios
-      .get(`http://localhost:5000/getorder/${user.user_id}`)
+      .get(`/getorder/${user.user_id}`)
       .then((response) => {
         setOrderList(response.data);
       })
@@ -29,7 +29,7 @@ const Cart = (props) => {
 
   const deleteOrder = (e) => {
     axios
-      .delete(`http://localhost:5000/order/${e}`)
+      .delete(`/order/${e}`)
       .then((response) => {
         getOrders();
         getOrderslocal();
@@ -46,7 +46,7 @@ const Cart = (props) => {
       orders_id: e.target.value,
     };
     axios
-      .put(`http://localhost:5000/order`, data)
+      .put(`/order`, data)
       .then((response) => {
         getOrders();
       })
@@ -72,7 +72,7 @@ const Cart = (props) => {
   const getOrderslocal = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/getorder/${user.user_id}`)
+      .get(`/getorder/${user.user_id}`)
       .then((response) => {
         setOrderList(response.data);
         localStorage.setItem("order", JSON.stringify(response.data));

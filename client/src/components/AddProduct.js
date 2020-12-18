@@ -84,7 +84,7 @@ const AddProduct = ({ close, ...props }) => {
 
   const getCategory = () => {
     axios
-      .get("http://localhost:5000/getcategory")
+      .get("/getcategory")
       .then((response) => {
         setGetProductCategory(response.data);
       })
@@ -96,7 +96,7 @@ const AddProduct = ({ close, ...props }) => {
   const getStore = () => {
     const user = jwt_decode(localStorage.getItem("token"));
     axios
-      .get(`http://localhost:5000/getStore/${user.user_id}`)
+      .get(`/getStore/${user.user_id}`)
       .then((response) => {
         setGetStoreName(response.data);
       })
@@ -164,7 +164,7 @@ const AddProduct = ({ close, ...props }) => {
         picture: pictureProduct,
       };
       axios
-        .post("http://localhost:5000/product", data)
+        .post("/product", data)
         .then((response) => {
           if (response.data) {
             alert("create a product");
