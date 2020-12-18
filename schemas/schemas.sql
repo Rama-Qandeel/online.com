@@ -1,6 +1,6 @@
 -- write the database name that you use here
-create database project-5;
-use project-5 
+create database project_5;
+use project_5 
 
 --store
 
@@ -47,12 +47,12 @@ user_id int,
 delivary_user_id int ,
 store_id int,
 product_id int,
-price LONGTEXT NULL DEFAULT NULL ;,
+price varchar(255) ,
 product_name varchar(255),
 quantity int,
 is_done BIT NOT NULL DEFAULT 0,
 is_deleted BIT NOT NULL DEFAULT 0,
-PRIMARY KEY (orders_id),
+PRIMARY KEY (orders_id)
 );
 
 --users
@@ -84,7 +84,6 @@ FOREIGN KEY (role_id) REFERENCES roles (role_id)
  
 CREATE table payment (
 payment_id int auto_increment NOT NULL,
-user_id int,
 payment_type varchar(255),
 credit_card varchar(255),
 expiration varchar(255),
@@ -93,18 +92,14 @@ check_out_id int,
 user_id int,
 is_deleted tinyint default 0,
 PRIMARY KEY (payment_id)
-FOREIGN KEY (user_id) REFERENCES users (user_id),
- FOREIGN KEY (check_out_id) REFERENCES check_out (check_out_id)
-)
+);
 
-//*************************************************/
  CREATE TABLE check_out (
  check_out_id int auto_increment NOT NULL,
- user_id  varchar(255),
+ user_id  int,
  orders_id int,
  delivary_user_id int,
  is_deleted TINYINT DEFAULT 0,
  PRIMARY KEY (check_out_id),
- FOREIGN KEY (user_id) REFERENCES users (user_id),
- FOREIGN KEY (orders_id) REFERENCES orders (orders_id)
- )
+ FOREIGN KEY (user_id) REFERENCES users (user_id)
+ );
