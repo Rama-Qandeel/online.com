@@ -140,6 +140,7 @@ const Register = (props) => {
         });
     }
   };
+// console.log('test');
 
   return (
     <div className="register-container2">
