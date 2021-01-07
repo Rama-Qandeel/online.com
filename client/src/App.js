@@ -13,10 +13,22 @@ import CSTprofile from "./CSTprofile";
 import StoreProfile from "./StoreProfile";
 import DelivaryProfile from "./DelivaryProfile";
 import Check from "./components/Check";
+import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
     <Router>
+      <Route
+        exact
+        path="/first"
+        render={(props) => (
+          <div>
+            <HomePage {...props}/>
+          </div>
+        )}
+      />
+     
+     
       <Route
         exact
         path="/login"

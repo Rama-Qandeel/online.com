@@ -14,6 +14,6 @@ const connection = mysql.createPool({
 //     return;
 //   }
 //   console.log('CONNECTION ID: ', connection.threadId);
-// });
+// }); 
 
 module.exports = connection;         

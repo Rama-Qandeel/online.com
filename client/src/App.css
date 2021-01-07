@@ -437,3 +437,107 @@ select {
   text-align: center;
   margin: 10px 6px 6px;
 }
+
+/* style header */
+
+.header{
+  height: 100vh;
+  background-image:url("../src/img/header.jpg");
+  background-size: cover;
+background-position: top;
+position: relative;
+/* clip-path: polygon(0 0,100% 0,100% 75vh,0 100%); */
+}
+
+.header__text-box{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  text-align: center;
+  color: rgb(247, 81, 16);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+height: 50vh;
+padding: 1rem 2rem;
+max-width: 30rem;
+width:100%;
+}
+
+.header__logo{
+  height: 2rem;
+  padding-right: .5rem;
+}
+
+.heading-primary-main{
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.heading-primary-sub{
+  font-weight: 600;
+}
+.section-btn{
+margin-top: 1.5rem;
+}
+
+.btn:link,.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding:15px 60px;
+  border-radius: 100px;
+  display:inline-block;
+  transition: all .2s;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 15rem;
+  
+  }
+  .btn:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+  }
+  .btn:active{
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+  }
+  
+  .btn-green{
+      background-color: rgb(223, 168, 68);
+      color: #ffffff;;
+  }
+  .btn::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .4s; }
+
+          
+          .btn:hover::after {
+              transform: scaleX(1.4) scaleY(1.6);
+              opacity: 0; }
+    .btn--animated {
+      animation: moveInBottom .5s ease-out .75s;
+      animation-fill-mode: backwards; }
+      @keyframes moveInBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(30px); }
+        100% {
+          opacity: 1;
+          transform: translate(0); } }
+
+          .heading-text-sub{
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+          }
+          
