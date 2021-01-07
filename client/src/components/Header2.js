@@ -35,15 +35,16 @@ const Header = (props) => {
   };
 
   return (
-    <div className="container2" style={{ marginTop: 0 }}>
+    <div className="" style={{ marginTop: 0 }}>
       <nav className=" navheader">
-        <div className="navheader-7">
+        <div className="">
           <p
             style={{
               float: "right",
-              marginTop: "10px",
+              marginTop: "20px",
               marginRight: "9px",
               fontSize: "20px",
+              fontWeight:"600",
               fontStyle: "bold",
             }}
           >
@@ -55,7 +56,7 @@ const Header = (props) => {
               alt="pic"
               style={{
                 float: "right",
-                marginTop: "10px",
+                marginTop: "20px",
                 marginRight: "5px",
                 borderRadius: "150px",
               }}
@@ -64,7 +65,7 @@ const Header = (props) => {
           </Link>
           <ul className="navbar2-nav ">
             <li className="nav-item">
-              <Link to="/cart" className="nav-link">
+              <Link to="/cart" className="nav-link ll">
                 🛒Cart
                 <sup>
                   <span
@@ -84,12 +85,12 @@ const Header = (props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/home" className="nav-link">
+              <Link to="/home" className="nav-link ll">
                 home
               </Link>
             </li>
             <li id="dropdown" className="nav-item">
-              <Link className="nav-link">Account</Link>
+              <Link className="nav-link ll">Account</Link>
               <div id="select">
                 <a href="/Account">My Account</a>
                 <a href="/delevaryman">My delevaryman Account</a>

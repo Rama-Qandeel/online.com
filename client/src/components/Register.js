@@ -140,7 +140,6 @@ const Register = (props) => {
         });
     }
   };
-  // register-container2
   return (
     <div className="back-ground">
     <div className="reg__text-box">

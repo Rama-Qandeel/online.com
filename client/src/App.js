@@ -47,16 +47,7 @@ const App = () => {
           </div>
         )}
       />
-      {/* <Route
-        exact
-        path="/"
-        render={(props) => (
-          <div>
-            <Header {...props} />
-            <Home {...props} />
-          </div>
-        )}
-      /> */}
+     
       <Route
         path="/home"
         render={(props) => (
