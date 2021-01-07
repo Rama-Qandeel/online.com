@@ -1,0 +1,6 @@
+
+We offer a wide range of products for all your
+everyday needs and even offer grocery home delivery,
+the user able to create own store and add products
+this website created by using Node.js/MySQL and
+React.
