@@ -146,21 +146,21 @@ const Content = ({ close, ...props }) => {
           <a className="close2" onClick={close}>
             &times;
           </a>
-          <div class="col-md-4">{product_name}</div>
+          <div class="" style={{marginLeft:" -130px"}}>{product_name}</div>
         </div>
         <div class="row">
           <div class="col-md-3 ml-auto">
             <img className="img-popup2" src={picture} alt={product_name} />
           </div>
           <div class="col-md-2 ml-auto">
-            <h2 style={{ marginLeft: "300px", width: "200px" }}>
+            <h2 style={{ marginLeft: "200px", width: "200px" }}>
               {product_name}
             </h2>
-            <p style={{ marginLeft: "300px", width: "200px" }}>
+            <p style={{ marginLeft: "200px", width: "200px" }}>
               {product_descripition}
             </p>
             {Number(discount_available) ? (
-              <div style={{ marginLeft: "300px", width: "200px" }}>
+              <div style={{ marginLeft: "200px", width: "200px" }}>
                 <h3 style={{ color: "red" }}>-{discount_available} off</h3>
                 <spam style={{ textDecoration: "line-through" }}>
                   {unit_price}
@@ -173,16 +173,16 @@ const Content = ({ close, ...props }) => {
               </div>
             ) : (
               <div>
-                <h2 style={{ marginLeft: "300px" }}>
+                <h2 style={{ marginLeft: "200px" }}>
                   {unit_price}
                   {quantity_per_unit}
                 </h2>
               </div>
             )}
-            <p style={{ marginLeft: "300px" }}>Quantity:</p>
+            <p style={{ marginLeft: "200px" }}>Quantity:</p>
             {btnAdd ? getquant() : null}
             {btnAdd ? (
-              <div style={{ marginLeft: "300px", width: "200px" }}>
+              <div style={{ marginLeft: "200px", width: "200px" }}>
                 <button className="button-popup2" onClick={IncrementItem}>
                   +
                 </button>
@@ -199,7 +199,7 @@ const Content = ({ close, ...props }) => {
                 </button>
               </div>
             ) : (
-              <div style={{ marginLeft: "300px", width: "200px" }}>
+              <div style={{ marginLeft: "200px", width: "200px" }}>
                 <button className="button-popup2" onClick={IncrementItem}>
                   +
                 </button>
