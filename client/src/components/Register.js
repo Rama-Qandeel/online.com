@@ -140,13 +140,15 @@ const Register = (props) => {
         });
     }
   };
-// console.log('test');
-
+  // register-container2
   return (
-    <div className="register-container2">
-      <h1>Register</h1>
-      <div className="handel_input">
+    <div className="back-ground">
+    <div className="reg__text-box">
+      <div class="row-reg">
+      <div class="col-1-of-2">
+      <div className="">
         <input
+         class="reg-input margin-top"
           type="text"
           name="email"
           placeholder="Email"
@@ -155,9 +157,10 @@ const Register = (props) => {
           required
         />
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorEmail}</div>
-      <div className="handel_input">
+      <div style={{ fontSize: "12", color: "black", fontWeight: "600" }}>{errorEmail}</div>
+      <div className="">
         <input
+          class="reg-input"
           type="password"
           name="password"
           placeholder="Password"
@@ -166,9 +169,10 @@ const Register = (props) => {
           required
         />
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorPassword}</div>
-      <div className="handel_input">
+      <div style={{ fontSize: "12", color: "black", fontWeight: "600" }}>{errorPassword}</div>
+      <div className="">
         <input
+         class="reg-input"
           type="text"
           name="firstName"
           placeholder="First Name"
@@ -177,9 +181,10 @@ const Register = (props) => {
           required
         />
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorFirstName}</div>
-      <div className="handel_input">
+      <div style={{ fontSize: "12", color: "black", fontWeight: "600" }}>{errorFirstName}</div>
+      <div className="">
         <input
+        class="reg-input"
           type="text"
           name="lastName"
           placeholder="Last Name"
@@ -188,11 +193,11 @@ const Register = (props) => {
           required
         />
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorLastName}</div>
+      <div style={{ fontSize: "12",color: "black", fontWeight: "600" }}>{errorLastName}</div>
       <div className="handel_input">
-        <label htmlFor="address"> Select a City</label>
-        <select name="address" id="address" onClick={handleChange}>
-          <option value="zarqa">zarqa</option>
+        <select class="reg-input" name="address" id="address" onClick={handleChange}>
+      
+          <option value="">Select a City</option>
           <option value="Amman">Amman</option>
           <option value="al-mafraq">al-mafraq</option>
           <option value="ma'an">ma'an</option>
@@ -203,8 +208,9 @@ const Register = (props) => {
           <option value="jarash">jarash</option>
         </select>
       </div>
-      <div className="handel_input">
+      <div className="">
         <input
+         class="reg-input"
           type="text"
           name="city"
           placeholder="Address"
@@ -213,8 +219,9 @@ const Register = (props) => {
           required
         />
       </div>
-      <div className="handel_input">
+      <div className="">
         <input
+         class="reg-input"
           type="text"
           name="region"
           placeholder="Region"
@@ -223,8 +230,9 @@ const Register = (props) => {
           required
         />
       </div>
-      <div className="handel_input">
+      <div className="">
         <input
+          class="reg-input"
           type="text"
           name="phoneNumber"
           placeholder="Phone Number"
@@ -233,30 +241,51 @@ const Register = (props) => {
           required
         />
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorPhoneNumber}</div>
-      <div className="handel_input">
-        <label htmlFor="roleId"> Select a type </label>
-        <select name="roleId" id="roleId" onClick={handleChange}>
+      {/* <div style={{ fontSize: "12", color: "red" }}>{errorPhoneNumber}</div> */}
+      <div className="">
+        {/* <label htmlFor="roleId"> Select a type </label> */}
+        <select class="reg-input" name="roleId" id="roleId" onClick={handleChange}>
+        <option value="">Select a type</option>
           <option value="1">Customer</option>
           <option value="2">Merchant</option>
           <option value="3">Delivery</option>
         </select>
       </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorRoleId}</div>
-      <div>
-        <button
-          class="btn btn-primary"
-          style={{ backgroundColor: "green", marginTop: "15px" }}
-          onClick={handleSubmit}
-        >
-          Register
-        </button>
+      {/* <div style={{ fontSize: "12", color: "red" }}>{errorRoleId}</div> */}
+       <button
+                class="btn btn-green btn--animated btn-login"
+                onClick={handleSubmit}
+              >
+                Register
+              </button>
+     
+  
+      
+      
       </div>
-      <Link to="/login">
-        <div>
-          <p>Already member?</p>
-        </div>
-      </Link>
+           
+           
+     <div class="col-1-of-2 ">
+     <div className="reg-img">
+         <div class="container-two-btn">
+         <a href="/login" class="btn btn-green btn--animated margin-right">
+                Login
+              </a>
+              <a href="/register" class="btn btn-green btn--animated">
+                Sign Up
+              </a>
+ 
+         </div>
+          
+     
+     </div>
+     
+     </div>
+
+
+
+      </div>
+      </div>
     </div>
   );
 };

@@ -92,7 +92,7 @@ const Login = (props) => {
               >
                 {errorEmail}
               </div>
-              <div className="login-btn">
+              <div className="">
                 <input
                   class="login_input"
                   type="password"

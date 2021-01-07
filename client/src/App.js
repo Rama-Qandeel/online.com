@@ -43,7 +43,7 @@ const App = () => {
         path="/register"
         render={(props) => (
           <div>
-            <Header {...props} /> <Register {...props} />
+           <Register {...props} />
           </div>
         )}
       />
