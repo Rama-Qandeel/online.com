@@ -74,7 +74,7 @@ const Home = () => {
           All
         </button>
         <button
-          className="category"
+          className="category color-orange"
           name="Groceries"
           onClick={getSpecificStores}
         >

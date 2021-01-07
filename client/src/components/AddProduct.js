@@ -188,17 +188,17 @@ const AddProduct = ({ close, ...props }) => {
       className="modal-body"
       style={{ boxShadow: "5px 10px 10px 5px #888888" }}
     >
-      <div class="container-fluid">
+      <div class="container-fluid pp">
         <div class="row">
           <a className="close2" onClick={close}>
             &times;
           </a>
         </div>
         <div class="row">
-          <h2 style={{ textAlign: "center", marginBottom: "5px" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "5px",marginLeft:"-4rem" }}>
             Add your product
           </h2>
-          <div style={{ marginTop: "10px" }}>
+          <div style={{ marginTop: "10px",marginLeft:"-4rem" }}>
             <div>
               <spam
                 style={{ fontSize: "12", color: "red", textAlign: "center" }}
