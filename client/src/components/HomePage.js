@@ -16,13 +16,13 @@ const HomePage = () => {
             </h1>
             <h3 class="heading-primary-sub">Login to your account</h3>
             <div class="section-btn">
-              <a href="#" class="btn btn-green btn--animated">
+              <a href="/register" class="btn btn-green btn--animated">
                 Register
               </a>
               <div className="heading-text-sub">
                 <span class="login-page__separator-text">Already member?</span>
               </div>
-              <a href="#" class="btn btn-green btn--animated">
+              <a href="/login" class="btn btn-green btn--animated">
                 Login
               </a>
             </div>

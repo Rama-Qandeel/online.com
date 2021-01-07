@@ -525,7 +525,7 @@ select {
   opacity: 0;
 }
 .btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation: moveInBottom 0.2s ease-out 0.2s;
   animation-fill-mode: backwards;
 }
 @keyframes moveInBottom {
@@ -651,4 +651,27 @@ li {
 
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
+}
+
+.btn-login{
+  margin-top:15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 100px;
+  display: inline-block;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 10rem;
+}
+
+.login_input{
+  width: 70%;
+    padding: 10px 10px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid rgb(238, 159, 13);
+    border-radius: 4px;
+    box-sizing: border-box;
 }

@@ -67,39 +67,58 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login-container2">
-      <h1>Login</h1>
-      <div className="">
-        <input
-          class="handel_input"
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div style={{ fontSize: "12", color: "red" }}>{errorEmail}</div>
-      <div className="login-btn">
-        <input
-          class="handel_input"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleChange}
-          required
-        />
-        <div style={{ fontSize: "12", color: "red" }}>{errorPassword}</div>
-      </div>
-      <button
-        class="btn btn-primary"
-        style={{ backgroundColor: "green", marginTop: "15px" }}
-        onClick={handleSubmit}
-      >
-        Login
-      </button>
+    <div className="">
+      <header className="header">
+        <div className="header__text-box">
+          <div className="heading-primary">
+            <h1 class="heading-primary">
+              <span class="heading-primary-main">Login</span>
+            </h1>
+            <h3 class="heading-primary-sub">Login to your account</h3>
+            <div class="section-btn">
+              <div className="">
+                <input
+                  class="login_input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div
+                style={{ fontSize: "12", color: "orange", fontWeight: "600" }}
+              >
+                {errorEmail}
+              </div>
+              <div className="login-btn">
+                <input
+                  class="login_input"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={handleChange}
+                  required
+                />
+                <div
+                  style={{ fontSize: "12", color: "orange", fontWeight: "600" }}
+                >
+                  {errorPassword}
+                </div>
+              </div>
+
+              <button
+                class="btn btn-green btn--animated btn-login"
+                onClick={handleSubmit}
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
     </div>
   );
 };

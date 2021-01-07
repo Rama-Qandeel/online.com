@@ -20,7 +20,7 @@ const App = () => {
     <Router>
       <Route
         exact
-        path="/first"
+        path="/"
         render={(props) => (
           <div>
             <HomePage {...props}/>
@@ -34,7 +34,6 @@ const App = () => {
         path="/login"
         render={(props) => (
           <div>
-            <Header {...props} />
             <Login {...props} />
           </div>
         )}
@@ -48,7 +47,7 @@ const App = () => {
           </div>
         )}
       />
-      <Route
+      {/* <Route
         exact
         path="/"
         render={(props) => (
@@ -57,7 +56,7 @@ const App = () => {
             <Home {...props} />
           </div>
         )}
-      />
+      /> */}
       <Route
         path="/home"
         render={(props) => (
